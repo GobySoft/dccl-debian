@@ -1,4 +1,4 @@
-Source: goby2
+Source: goby-dccl2
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
 Build-Depends: cdbs,

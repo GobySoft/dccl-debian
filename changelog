@@ -1,4 +1,4 @@
-goby2 (2.0.1~rc4) lucid; urgency=low
+goby-dccl2 (2.0.1~rc4) lucid; urgency=low
 
   * Builds for DCCL alone
 
