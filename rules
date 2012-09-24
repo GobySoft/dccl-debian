@@ -6,7 +6,7 @@ include /usr/share/cdbs/1/class/cmake.mk
 
 # Add here any variable or target overrides you need.
 
-DEB_CMAKE_EXTRA_FLAGS = -Dbuild_moos=ON -Dbuild_doc=ON -Denable_testing=ON
+DEB_CMAKE_EXTRA_FLAGS = -Dbuild_dccllite=ON -Dbuild_acomms=OFF -Dbuild_common=OFF -Dbuild_moos=OFF -Denable_testing=ON -Dbuild_util=OFF -Dbuild_pb=OFF -Dmake_thread_safe_logger=OFF -Dmake_proto_runtime_compile=OFF
 DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
 DEB_MAKE_CHECK_TARGET = test
 DEB_BUILD_PARALLEL = true
