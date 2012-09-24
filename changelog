@@ -1,0 +1,5 @@
+goby2 (2.0.1~rc4) lucid; urgency=low
+
+  * Builds for DCCL alone
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 24 Sep 2012 14:20:30 -0400
