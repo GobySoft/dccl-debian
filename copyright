@@ -4,11 +4,11 @@ This work was packaged for Debian by:
 
 It was downloaded from:
 
-    https://launchpad.net/goby
+    https://launchpad.net/dccl
 
 Upstream Author(s):
 
-    Goby Developers: https://launchpad.net/~goby-dev
+    DCCL Developers: https://launchpad.net/~dccl-dev
     Lead: Toby Schneider <tes.aubergine@gmail.com>
 
 Copyright:
@@ -17,11 +17,11 @@ Copyright:
      Copyright 2009-2012 Toby Schneider (https://launchpad.net/~tes)
                          Massachusetts Institute of Technology (2007-)
                          Woods Hole Oceanographic Institution (2007-)
-                         Goby Developers Team (https://launchpad.net/~goby-dev)
+                         DCCL Developers Team (https://launchpad.net/~dccl-dev)
 
 License:
 
-    Goby is licensed under the LGPL version 3 (libraries)
+    DCCL is licensed under the LGPL version 3 (libraries)
     and GPL version 3 (binaries),
     see "/usr/share/common-licenses/GPL-3",
     "/usr/share/common-licenses/LGPL-3".    
