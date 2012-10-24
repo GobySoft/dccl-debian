@@ -1,3 +1,9 @@
+dccl3 (3.0.0~alpha2-0~dccldev1~precise1) precise; urgency=low
+
+  * Fixed building of tests with package
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Wed, 24 Oct 2012 13:29:47 -0400
+
 dccl3 (3.0.0~alpha1-0~dccldev1~precise1) precise; urgency=low
 
   * First build of standalone DCCL package outside of Goby
