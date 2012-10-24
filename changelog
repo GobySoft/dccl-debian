@@ -1,5 +1,5 @@
-goby-dccl2 (2.0.1~rc4) lucid; urgency=low
+dccl3 (3.0.0~alpha1-0~dccldev1~precise1) precise; urgency=low
 
-  * Builds for DCCL alone
+  * First build of standalone DCCL package outside of Goby
 
- -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 24 Sep 2012 14:20:30 -0400
+ -- Toby Schneider <tes.aubergine@gmail.com>  Wed, 24 Oct 2012 13:11:56 -0400
