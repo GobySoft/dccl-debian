@@ -16,7 +16,6 @@ Homepage: https://launchpad.net/dccl
 
 Package: libdccl3-dev
 Provides: libdccl-dev
-Conflicts: libgoby-dev, libgoby1-dev, libgoby2-dev, libdccl2-dev
 Section: libdevel
 Architecture: any
 Depends: libdccl3 (= ${binary:Version}),
@@ -30,7 +29,6 @@ Description: Developers' package for the Dynamic Compact Control Language.
  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
 
 Package: libdccl3
-Conflicts: libgoby1, libgoby2, libdccl2
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
