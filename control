@@ -9,7 +9,9 @@ Build-Depends: cdbs,
                libcrypto++-dev, 
                libprotobuf-dev, 
                libprotoc-dev,
-               protobuf-compiler
+               protobuf-compiler,       
+               doxygen,
+               graphviz
 Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
