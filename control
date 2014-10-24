@@ -11,10 +11,7 @@ Build-Depends: cdbs,
                libprotoc-dev,
                protobuf-compiler,       
                doxygen,
-               graphviz,
-               ghostscript,
-               texlive-binaries,        
-               texlive-latex-base
+               graphviz
 Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
