@@ -11,25 +11,51 @@ Upstream Author(s):
     DCCL Developers: https://launchpad.net/~dccl-dev
     Lead: Toby Schneider <tes.aubergine@gmail.com>
 
-Copyright:
-
-    - All files:
-     Copyright 2009-2012 Toby Schneider (https://launchpad.net/~tes)
-                         Massachusetts Institute of Technology (2007-)
-                         Woods Hole Oceanographic Institution (2007-)
-                         DCCL Developers Team (https://launchpad.net/~dccl-dev)
+Copyright: 2009-2014 Toby Schneider (https://launchpad.net/~tes)
+           2013-2014 GobySoft, LLC 
+           2007-2014 Massachusetts Institute of Technology (2007-2014)
+           2012-2014 DCCL Developers Team (https://launchpad.net/~dccl-dev)
 
 License:
 
-    DCCL is licensed under the LGPL version 3 (libraries)
-    and GPL version 3 (binaries),
-    see "/usr/share/common-licenses/GPL-3",
-    "/usr/share/common-licenses/LGPL-3".    
+Except for the files in src/apps and src/tests, DCCL is licensed under the LGPL version 2.1 or later:
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+        
+The file in src/apps and src/tests is licensed under the GPL version 2 or later (binaries).
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+    
+    On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. The GNU Lesser GPL can be found in /usr/share/common-licenses/LGPL.
 
 The Debian packaging is:
 
-    Copyright (C) 2011-2012 Toby Schneider <tes.aubergine@gmail.com>
+    Copyright (C) 2011-2014 Toby Schneider <tes.aubergine@gmail.com>
 
-and is licensed under the GPL version 3,
-see "/usr/share/common-licenses/GPL-3".
+and is licensed under the GPL version 2 or later, see above.
 
