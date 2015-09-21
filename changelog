@@ -1,3 +1,9 @@
+dccl3 (3.0.1-0~squeeze1) squeeze; urgency=medium
+
+  * Release 3.0.1
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 21 Sep 2015 13:45:53 -0400
+
 dccl3 (3.0.0~rc1-0~dccldev1~ubuntu12.04.1) precise; urgency=low
 
   * Build for release candidate 1
