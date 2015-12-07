@@ -1,3 +1,4 @@
 usr/include/*
 usr/lib/lib*.so
 usr/share/*
+usr/bin/protoc-gen-dccl
