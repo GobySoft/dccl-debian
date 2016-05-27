@@ -1,3 +1,9 @@
+dccl3 (3.0.3-0~ubuntu16.04.2) xenial; urgency=medium
+
+  * Exclude building tests on armhf xenial since it breaks Launchpad
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 27 May 2016 14:41:28 -0400
+
 dccl3 (3.0.3-0~ubuntu12.04.1) precise; urgency=medium
 
   * Release 3.0.3
