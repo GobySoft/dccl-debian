@@ -8,8 +8,8 @@ Build-Depends: cdbs,
                libcrypto++-dev, 
                libprotobuf-dev, 
                libprotoc-dev,
-               protobuf-compiler,       
-               doxygen,
+               protobuf-compiler,
+               doxygen, 
                graphviz
 Standards-Version: 3.9.3
 Section: libs
@@ -37,6 +37,7 @@ Description: Libraries for the Dynamic Compact Control Language.
 
 Package: dccl3-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
+# Build-Profiles: <!nodoc>
 Section: doc
 Architecture: all
 Description: Documentation for the Dynamic Compact Control Language.
