@@ -1,3 +1,9 @@
+dccl3 (3.0.4-0~ubuntu16.04.1) xenial; urgency=medium
+
+  * Release 3.0.4
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 24 Jun 2016 11:43:02 -0400
+
 dccl3 (3.0.3-0~ubuntu14.04.2) trusty; urgency=medium
 
   * Exclude building tests on armhf since it breaks Launchpad
