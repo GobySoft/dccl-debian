@@ -1,6 +1,0 @@
---- /dev/null
-+++ b/share/doc/README
-@@ -0,0 +1,3 @@
-+If DCCL was built with documentation enabled, open in a webbrowser:
-+html/index.html
-+
