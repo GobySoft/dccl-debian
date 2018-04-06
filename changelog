@@ -1,3 +1,15 @@
+dccl3 (3.0.7~rc1-1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Fix install for lib
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 06 Apr 2018 15:45:15 -0400
+
+dccl3 (3.0.7~rc1-0~ubuntu16.04.1) xenial; urgency=medium
+
+  * Attempt at multi-arch
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 06 Apr 2018 15:26:11 -0400
+
 dccl3 (3.0.6-0~ubuntu14.04.1) trusty; urgency=medium
 
   * Release 3.0.6
