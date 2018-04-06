@@ -32,7 +32,7 @@ Description: Developers' package for the Dynamic Compact Control Language.
 
 Package: libdccl3
 Section: libs
-Multi-Arch: same
+# Multi-Arch: same
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Dynamic Compact Control Language.
