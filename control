@@ -11,7 +11,8 @@ Build-Depends: cdbs (>= 0.4.93~),
                protobuf-compiler,
                libb64-dev,
                doxygen, 
-               graphviz
+               graphviz,
+               qemu-user-static [armhf]
 Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
@@ -19,6 +20,7 @@ Homepage: https://launchpad.net/dccl
 Package: libdccl3-dev
 Provides: libdccl-dev
 Section: libdevel
+Multi-Arch: same
 Architecture: any
 Depends: libdccl3 (= ${binary:Version}),
          libboost-dev (>= 1.40~), 
@@ -32,7 +34,7 @@ Description: Developers' package for the Dynamic Compact Control Language.
 
 Package: libdccl3
 Section: libs
-# Multi-Arch: same
+Multi-Arch: same
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Dynamic Compact Control Language.
@@ -41,6 +43,7 @@ Description: Libraries for the Dynamic Compact Control Language.
 Package: dccl3-compiler
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: science
+Multi-Arch: foreign
 Architecture: any
 Description: Protobuf compiler for DCCL (protoc-gen-dccl): used to create Boost Units methods
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.

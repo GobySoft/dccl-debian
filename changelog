@@ -1,3 +1,15 @@
+dccl3 (3.0.7~rc1-4~ubuntu16.04.1) xenial; urgency=medium
+
+  * Don't include docs in libdccl3-dev
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 06 Apr 2018 16:55:20 -0400
+
+dccl3 (3.0.7~rc1-3~ubuntu16.04.1) xenial; urgency=medium
+
+  * Added qemu-user-static so we can run the generated protoc-gen-dccl during crossbuilds
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 06 Apr 2018 16:40:12 -0400
+
 dccl3 (3.0.7~rc1-2~ubuntu16.04.1) xenial; urgency=medium
 
   * Set correct CC/CXX
