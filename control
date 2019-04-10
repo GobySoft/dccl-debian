@@ -11,8 +11,7 @@ Build-Depends: cdbs (>= 0.4.93~),
                protobuf-compiler,
                libb64-dev,
                doxygen, 
-               graphviz,
-               qemu-user-static [armhf]
+               graphviz
 Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
