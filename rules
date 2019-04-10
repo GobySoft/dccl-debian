@@ -16,8 +16,10 @@ endif
 
 DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
+DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
+# cross compiling
 ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
-	DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_CROSSCOMPILING=ON
+	DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
 endif
 
 $(info $$DEB_BUILD_ARCH is [${DEB_BUILD_ARCH}])
