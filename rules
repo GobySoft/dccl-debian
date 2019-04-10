@@ -14,5 +14,11 @@ ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && ec
 	DEB_MAKE_CHECK_TARGET = test
 endif
 
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
+ifneq ($(DEB_HOST_ARCH),$(DEB_TARGET_ARCH))
+	DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_CROSSCOMPILING=ON
+endif
+
 CC=$(DEB_HOST_GNU_TYPE)-gcc
 CXX=$(DEB_HOST_GNU_TYPE)-g++
