@@ -19,8 +19,8 @@ Homepage: https://launchpad.net/dccl
 Package: libdccl3-dev
 Provides: libdccl-dev
 Section: libdevel
-Multi-Arch: same
 Architecture: any
+Multi-Arch: same
 Depends: libdccl3 (= ${binary:Version}),
          libboost-dev (>= 1.40~), 
          libcrypto++-dev,
@@ -33,8 +33,8 @@ Description: Developers' package for the Dynamic Compact Control Language.
 
 Package: libdccl3
 Section: libs
-Multi-Arch: same
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
@@ -42,8 +42,8 @@ Description: Libraries for the Dynamic Compact Control Language.
 Package: dccl3-compiler
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: science
-Multi-Arch: foreign
 Architecture: any
+Multi-Arch: foreign
 Description: Protobuf compiler for DCCL (protoc-gen-dccl): used to create Boost Units methods
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
 
@@ -52,6 +52,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 # Build-Profiles: <!nodoc>
 Section: doc
 Architecture: all
+Multi-Arch: foreign
 Description: Documentation for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
 
