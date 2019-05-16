@@ -1,3 +1,9 @@
+dccl3 (3.0.11-0~ubuntu18.04.1) bionic; urgency=medium
+
+  * Release 3.0.11
+
+ -- Toby Schneider <toby@gobysoft.org>  Thu, 16 May 2019 16:39:48 +0100
+
 dccl3 (3.0.10-0~ubuntu18.04.1) bionic; urgency=medium
 
   * Release 3.0.10
