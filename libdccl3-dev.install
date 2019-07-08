@@ -1,4 +1,4 @@
 usr/include/*
 usr/lib/*/lib*.so
-usr/share/dccl/cmake/*
+usr/lib/*/cmake/dccl/*
 usr/share/dccl/examples/*
