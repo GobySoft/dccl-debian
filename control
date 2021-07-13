@@ -1,4 +1,4 @@
-Source: dccl3
+Source: dccl4
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
 Build-Depends: cdbs (>= 0.4.93~),
@@ -16,12 +16,13 @@ Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
 
-Package: libdccl3-dev
+Package: libdccl4-dev
 Provides: libdccl-dev
+Conflicts: libdccl3-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libdccl3 (= ${binary:Version}),
+Depends: libdccl4 (= ${binary:Version}),
          libboost-dev (>= 1.40~), 
          libcrypto++-dev,
          libprotobuf-dev, 
@@ -29,37 +30,41 @@ Depends: libdccl3 (= ${binary:Version}),
          libb64-dev,
          ${misc:Depends}
 Description: Developers' package for the Dynamic Compact Control Language.
-  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
+  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
 
-Package: libdccl3
+Package: libdccl4
 Section: libs
 Architecture: any
+Conflicts: libdccl3
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Dynamic Compact Control Language.
-  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
+  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
 
-Package: dccl3-compiler
+Package: dccl4-compiler
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
+Conflicts: dccl3-compiler
 Multi-Arch: foreign
 Description: Protobuf compiler for DCCL (protoc-gen-dccl): used to create Boost Units methods
-  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
+  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
+  This package provides the 'protoc-gen-dccl' plugin for the Protocol Buffers compiler (protoc)
 
-Package: dccl3-doc
+Package: dccl4-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
 # Build-Profiles: <!nodoc>
 Section: doc
 Architecture: all
 Multi-Arch: foreign
 Description: Documentation for the Dynamic Compact Control Language.
-  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
+  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
 
-Package: dccl3-apps
+Package: dccl4-apps
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: science
+Conflicts: dccl3-apps
 Architecture: any
 Description: Applications for the Dynamic Compact Control Language.
-  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
+  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
   This package provides the 'dccl' command line tool.
