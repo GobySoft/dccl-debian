@@ -10,7 +10,8 @@ Build-Depends: cdbs (>= 0.4.93~),
                libprotoc-dev,
                protobuf-compiler,
                libb64-dev,
-               doxygen, 
+               liblua5.3-dev,
+               doxygen,
                graphviz
 Standards-Version: 3.9.3
 Section: libs
@@ -28,6 +29,7 @@ Depends: libdccl4 (= ${binary:Version}),
          libprotobuf-dev, 
          libprotoc-dev,
          libb64-dev,
+         liblua5.3-dev,
          ${misc:Depends}
 Description: Developers' package for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
