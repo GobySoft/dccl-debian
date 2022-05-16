@@ -12,10 +12,21 @@ Build-Depends: cdbs (>= 0.4.93~),
                libb64-dev,
                liblua5.3-dev,
                doxygen,
-               graphviz
+               graphviz,
+               dh-python,
+               libpython3-all-dev,
+               python3-all-dev:any,
+               python3-setuptools
 Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
+
+Package: python3-dccl4
+Conflicts: python3-dccl3
+Architecture: any
+Depends: libdccl4 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-protobuf
+Description: Python package for the Dynamic Compact Control Language.
+  The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
 
 Package: libdccl4-dev
 Provides: libdccl-dev
