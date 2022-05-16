@@ -13,7 +13,8 @@ Build-Depends: cdbs (>= 0.4.93~),
                doxygen, 
                graphviz,
                dh-python,
-               python3-all-dev,
+               libpython3-all-dev,
+               python3-all-dev:any,
                python3-setuptools
 Standards-Version: 3.9.3
 Section: libs
