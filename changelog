@@ -1,3 +1,12 @@
+dccl3 (3.0.11-0~ubuntu18.04.2) bionic; urgency=medium
+
+  * Fix multiarch package bugs: make libdccl3-dev doc dir a symlink to
+    libdccl3 and recompress changelog.Debian.gz without timestamp to
+    ensure identical files for Multi-Arch: same packages across
+    architectures (Closes: #multiarch-doc-conflict)
+
+ -- Toby Schneider <toby@gobysoft.org>  Mon, 16 Mar 2026 05:51:05 +0000
+
 dccl3 (3.0.11-0~ubuntu18.04.1) bionic; urgency=medium
 
   * Release 3.0.11

@@ -31,3 +31,13 @@ $(info $$DEB_CMAKE_EXTRA_FLAGS is [${DEB_CMAKE_EXTRA_FLAGS}])
 
 CC=$(DEB_HOST_GNU_TYPE)-gcc
 CXX=$(DEB_HOST_GNU_TYPE)-g++
+
+# Fix Multi-Arch: same doc conflicts: make libdccl3-dev doc dir a symlink
+binary-fixup/libdccl3-dev::
+	rm -rf $(CURDIR)/debian/libdccl3-dev/usr/share/doc/libdccl3-dev
+	ln -sf libdccl3 $(CURDIR)/debian/libdccl3-dev/usr/share/doc/libdccl3-dev
+
+# Fix Multi-Arch: same doc conflicts: recompress changelog without timestamp
+binary-fixup/libdccl3::
+	gunzip -f $(CURDIR)/debian/libdccl3/usr/share/doc/libdccl3/changelog.Debian.gz
+	gzip -n -9 $(CURDIR)/debian/libdccl3/usr/share/doc/libdccl3/changelog.Debian
