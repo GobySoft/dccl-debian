@@ -1,4 +1,4 @@
-Source: dccl4
+Source: dccl5
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
 Build-Depends: cdbs (>= 0.4.93~),
@@ -21,20 +21,20 @@ Standards-Version: 3.9.3
 Section: libs
 Homepage: https://launchpad.net/dccl
 
-Package: python3-dccl4
-Conflicts: python3-dccl3
+Package: python3-dccl5
+Conflicts: python3-dccl4
 Architecture: any
-Depends: libdccl4 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-protobuf
+Depends: libdccl5 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-protobuf
 Description: Python package for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). Formerly part of Goby (https://launchpad.net/goby) for releases 1 and 2, we believe DCCL has reached a level of maturity that it can be more easily standardized, adopted, and maintained as a separate project.
 
-Package: libdccl4-dev
+Package: libdccl5-dev
 Provides: libdccl-dev
-Conflicts: libdccl3-dev
+Conflicts: libdccl4-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libdccl4 (= ${binary:Version}),
+Depends: libdccl5 (= ${binary:Version}),
          libboost-dev (>= 1.40~), 
          libcrypto++-dev,
          libprotobuf-dev, 
@@ -45,26 +45,26 @@ Depends: libdccl4 (= ${binary:Version}),
 Description: Developers' package for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
 
-Package: libdccl4
+Package: libdccl5
 Section: libs
 Architecture: any
-Conflicts: libdccl3
+Conflicts: libdccl4
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
 
-Package: dccl4-compiler
+Package: dccl5-compiler
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
-Conflicts: dccl3-compiler
+Conflicts: dccl4-compiler
 Multi-Arch: foreign
 Description: Protobuf compiler for DCCL (protoc-gen-dccl): used to create Boost Units methods
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
   This package provides the 'protoc-gen-dccl' plugin for the Protocol Buffers compiler (protoc)
 
-Package: dccl4-doc
+Package: dccl5-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
 # Build-Profiles: <!nodoc>
 Section: doc
@@ -73,10 +73,10 @@ Multi-Arch: foreign
 Description: Documentation for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
 
-Package: dccl4-apps
+Package: dccl5-apps
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: science
-Conflicts: dccl3-apps
+Conflicts: dccl4-apps
 Architecture: any
 Description: Applications for the Dynamic Compact Control Language.
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
