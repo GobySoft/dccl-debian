@@ -1,35 +1,46 @@
 #!/usr/bin/make -f
 
 export SOURCE_DATE_EPOCH ?= $(shell dpkg-parsechangelog -STimestamp)
-
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/cmake.mk
-include /usr/share/cdbs/1/class/python-distutils.mk
-
-DEB_PYTHON_DISTUTILS_SRCDIR = python
-DEB_PYTHON3_MODULE_PACKAGES = python3-dccl5
-
-# Add here any variable or target overrides you need.
-DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
-DEB_BUILD_PARALLEL = true
-
-# only run unit tests and build documentation on x86_64 and i386
-ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
-	DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON  -Dbuild_doc=ON
-	DEB_MAKE_CHECK_TARGET = test
-endif
+export CTEST_OUTPUT_ON_FAILURE=ON
 
 DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
 DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
+
+CMAKE_EXTRA_FLAGS =
+
+# only run unit tests and build documentation on x86_64 and i386
+ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
+	CMAKE_EXTRA_FLAGS += -Denable_testing=ON -Dbuild_doc=ON
+endif
+
 # cross compiling
 ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
-	DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
+	CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
 endif
 
 $(info $$DEB_BUILD_ARCH is [${DEB_BUILD_ARCH}])
 $(info $$DEB_TARGET_ARCH is [${DEB_TARGET_ARCH}])
-$(info $$DEB_CMAKE_EXTRA_FLAGS is [${DEB_CMAKE_EXTRA_FLAGS}])
+$(info $$CMAKE_EXTRA_FLAGS is [${CMAKE_EXTRA_FLAGS}])
 
-CC=$(DEB_HOST_GNU_TYPE)-gcc
-CXX=$(DEB_HOST_GNU_TYPE)-g++
+export CC=$(DEB_HOST_GNU_TYPE)-gcc
+export CXX=$(DEB_HOST_GNU_TYPE)-g++
+
+%:
+	dh $@ --with python3 --buildsystem=cmake
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(CMAKE_EXTRA_FLAGS)
+
+override_dh_auto_build:
+	dh_auto_build
+	cd $(CURDIR)/python && python3 setup.py build
+
+override_dh_auto_install:
+	dh_auto_install
+	cd $(CURDIR)/python && python3 setup.py install --install-layout=deb --root=$(CURDIR)/debian/tmp
+
+override_dh_auto_test:
+ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
+	dh_auto_test
+endif

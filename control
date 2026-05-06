@@ -1,8 +1,7 @@
 Source: dccl5
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: cdbs (>= 0.4.93~),
-               debhelper (>= 8.1.3),
+Build-Depends: debhelper (>= 13),
                cmake, 
                libboost-dev (>= 1.40~), 
                libcrypto++-dev, 
