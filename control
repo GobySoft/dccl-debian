@@ -1,7 +1,7 @@
 Source: dccl4
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: debhelper (>= 10),
                cmake, 
                libboost-dev (>= 1.40~), 
                libcrypto++-dev, 
