@@ -1,7 +1,7 @@
 Source: dccl5
 Priority: extra
-Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: debhelper (>= 10),
+Maintainer: Toby Schneider <toby@gobysoft.org>
+Build-Depends: debhelper-compat (= 13),
                cmake, 
                libboost-dev (>= 1.40~), 
                libcrypto++-dev, 
@@ -18,7 +18,7 @@ Build-Depends: debhelper (>= 10),
                python3-setuptools
 Standards-Version: 3.9.3
 Section: libs
-Homepage: https://launchpad.net/dccl
+Homepage: https://libdccl.org
 
 Package: python3-dccl5
 Conflicts: python3-dccl4
