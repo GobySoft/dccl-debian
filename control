@@ -4,6 +4,7 @@ Maintainer: Toby Schneider <toby@gobysoft.org>
 Build-Depends: debhelper-compat (= 13),
                cmake, 
                libboost-dev (>= 1.40~), 
+               libudunits2-dev,
                libcrypto++-dev, 
                libprotobuf-dev, 
                libprotoc-dev,
@@ -59,9 +60,9 @@ Section: science
 Architecture: any
 Conflicts: dccl4-compiler
 Multi-Arch: foreign
-Description: Protobuf compiler for DCCL (protoc-gen-dccl): used to create Boost Units methods
+Description: Protobuf compiler plugin for DCCL (protoc-gen-dccl): generates DCCL IDs and units methods
   The Dynamic Compact Control Language (DCCL) is a marshalling and protocol language for very low throughput links (e.g. acoustic, satellite, low frequency radio). 
-  This package provides the 'protoc-gen-dccl' plugin for the Protocol Buffers compiler (protoc)
+  This package provides the 'protoc-gen-dccl' plugin for the Protocol Buffers compiler (protoc), which checks the units given by (dccl.field).udunits (UDUNITS-2) or (dccl.field).units (Boost Units) and generates Boost Units accessors and mutators for them.
 
 Package: dccl5-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
