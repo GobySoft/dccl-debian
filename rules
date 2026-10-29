@@ -7,7 +7,8 @@ DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
 DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
 
-CMAKE_EXTRA_FLAGS =
+# UDUNITS-2 is used only by protoc-gen-dccl, keeping libdccl free of it
+CMAKE_EXTRA_FLAGS = -Denable_udunits=ON -Denable_udunits_runtime=OFF
 
 # only run unit tests and build documentation on x86_64 and i386
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
